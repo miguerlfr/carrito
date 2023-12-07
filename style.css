@@ -100,7 +100,7 @@ header {
     height: 27rem;
     object-fit: cover;
     filter: invert(15%);
-    /* transition: 5s; */
+    transition: 5s;
 }
 
 .banner {
@@ -202,7 +202,7 @@ header {
 }
 
 .ctabla {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
