@@ -98,7 +98,7 @@ header {
     height: 27rem;
     object-fit: cover;
     filter: invert(15%);
-    transition: 5s;
+    /* transition: 5s; */
 }
 
 .banner {
@@ -193,8 +193,6 @@ header {
 
 #hola {
     position: relative;
-    display: inline-block;
-    cursor: pointer;
     width: 40px;
     border-radius: 20px;
 }
@@ -203,11 +201,11 @@ header {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 25%;
 }
 
 table {
-    width: 373.87px;
+    width: 383.87px;
     border: 1px solid red;
     background-color: white;
     border-collapse: collapse;
@@ -253,7 +251,7 @@ td {
 }
 
 .fil {
-    width: 371.87px;
+    width: 381.87px;
     background-color: white;
     border-bottom: 1px solid red;
     border-right: 1px solid red;
@@ -426,6 +424,10 @@ td {
 }
 
 @media (max-width: 400px) {
+    .ctabla {
+        right: 34%;
+    }
+  
     table {
         width: 318.87px;
         font-size: 10.4px;
