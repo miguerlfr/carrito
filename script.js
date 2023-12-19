@@ -232,3 +232,31 @@ function vaciarCarrito() {
         document.getElementById("totalPrecio").textContent = '0';
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var carrito = document.querySelector(".carrito");
+    var ctabla = document.querySelector(".ctabla");
+
+    carrito.addEventListener('click', function(event) {
+        event.stopPropagation();
+        if (ctabla.style.display === "none" || ctabla.style.display === "") {
+            ctabla.style.display = "block";
+        } else {
+            ctabla.style.display = "none";
+        }
+    });
+
+    // Evitar que se cierre al hacer clic en .ctabla
+    ctabla.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
+    // Cerrar .ctabla si se hace clic fuera de ella
+    document.addEventListener('click', function(event) {
+        // Verificar si se hizo clic en la imagen del carrito
+        if (!event.target.classList.contains('carrito')) {
+            // Si no se hizo clic en la imagen del carrito, no ocultar la tabla
+            event.stopPropagation();
+        }
+    });
+});
